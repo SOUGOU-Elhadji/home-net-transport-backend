@@ -42,6 +42,7 @@ model Client {
   firstName    String
   lastName     String
   phone        String
+  email        String?   @unique
   address      String
   city         String
   postalCode   String

@@ -2,7 +2,6 @@
 import app from "./app";
 import path from "path";
 import express from "express";
-import { createServer as createViteServer } from "vite";
 // import { execSync } from "child_process";
 
 const PORT = 3000;
@@ -48,3 +47,9 @@ async function startServer() {
 }
 
 startServer();
+function createViteServer(arg0: {
+  server: { middlewareMode: boolean; }; appType: string; root: string; // target the decoupled frontend folder!
+}) {
+  throw new Error("Function not implemented.");
+}
+
