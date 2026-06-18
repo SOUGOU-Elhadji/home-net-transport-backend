@@ -10,7 +10,7 @@ async function ensureDefaultUsers() {
   const usersCount = await prisma.user.count();
   if (usersCount === 0) {
     // Seed standard accounts
-    const roles: ("SUPER_ADMIN" | "BUREAU" | "CHAUFFEUR")[] = ["SUPER_ADMIN", "BUREAU", "CHAUFFEUR"];
+    const roles: ("SUPER_ADMIN" | "ADMIN" | "CHAUFFEUR")[] = ["SUPER_ADMIN", "ADMIN", "CHAUFFEUR"];
     
     const adminPassword = await bcryptjs.hash("admin123", 10);
     const bureauPassword = await bcryptjs.hash("bureau123", 10);
@@ -32,7 +32,7 @@ async function ensureDefaultUsers() {
           password: bureauPassword,
           firstName: "Sophie",
           lastName: "AgentBureau",
-          role: "BUREAU",
+          role: "ADMIN",
           phone: "0602030405",
           status: "ACTIVE"
         },

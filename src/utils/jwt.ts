@@ -7,7 +7,7 @@ const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || "home_net_transport
 export interface TokenPayload {
   userId: string;
   email: string;
-  role: "SUPER_ADMIN" | "BUREAU" | "CHAUFFEUR";
+  role: "SUPER_ADMIN" | "ADMIN" | "CHAUFFEUR";
   firstName: string;
   lastName: string;
 }

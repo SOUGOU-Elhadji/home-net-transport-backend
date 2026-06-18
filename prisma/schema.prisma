@@ -25,7 +25,7 @@ model User {
   firstName     String
   lastName      String
   phone         String?
-  role          String   // "SUPER_ADMIN", "BUREAU", "CHAUFFEUR"
+  role          String   // "SUPER_ADMIN", "ADMIN", "CHAUFFEUR"
   licenseNumber String?  // For chauffeurs
   licenseExpiry String?  // For chauffeurs, e.g. "2028-12-31"
   status        String   @default("ACTIVE") // "ACTIVE", "INACTIVE"

@@ -8,8 +8,8 @@ const router = Router();
 // Office and admin can manage clients, chauffeurs can view list but not alter
 router.get("/", authenticate as any, getClients as any);
 router.get("/:id", authenticate as any, getClientById as any);
-router.post("/", authenticate as any, authorize(["SUPER_ADMIN", "BUREAU"]) as any, createClient as any);
-router.put("/:id", authenticate as any, authorize(["SUPER_ADMIN", "BUREAU"]) as any, updateClient as any);
+router.post("/", authenticate as any, authorize(["SUPER_ADMIN", "ADMIN"]) as any, createClient as any);
+router.put("/:id", authenticate as any, authorize(["SUPER_ADMIN", "ADMIN"]) as any, updateClient as any);
 router.delete("/:id", authenticate as any, authorize(["SUPER_ADMIN"]) as any, deleteClient as any);
 router.get("/:id/history", authenticate as any, getClientHistory as any);
 

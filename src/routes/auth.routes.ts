@@ -13,7 +13,7 @@ router.post("/reset-password", resetPassword as any);
 router.get("/profile", authenticate as any, getProfile as any);
 
 // Admin-only user management routes
-router.get("/users", authenticate as any, authorize(["SUPER_ADMIN", "BUREAU"]) as any, getUsers as any);
+router.get("/users", authenticate as any, authorize(["SUPER_ADMIN", "ADMIN"]) as any, getUsers as any);
 router.post("/users", authenticate as any, authorize(["SUPER_ADMIN"]) as any, createUser as any);
 router.put("/users/:id", authenticate as any, authorize(["SUPER_ADMIN"]) as any, updateUser as any);
 

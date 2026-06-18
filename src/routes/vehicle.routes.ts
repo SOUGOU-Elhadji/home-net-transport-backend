@@ -7,8 +7,8 @@ const router = Router();
 
 router.get("/", authenticate as any, getVehicles as any);
 router.get("/:id", authenticate as any, getVehicleById as any);
-router.post("/", authenticate as any, authorize(["SUPER_ADMIN", "BUREAU"]) as any, createVehicle as any);
-router.put("/:id", authenticate as any, authorize(["SUPER_ADMIN", "BUREAU"]) as any, updateVehicle as any);
+router.post("/", authenticate as any, authorize(["SUPER_ADMIN", "ADMIN"]) as any, createVehicle as any);
+router.put("/:id", authenticate as any, authorize(["SUPER_ADMIN", "ADMIN"]) as any, updateVehicle as any);
 router.delete("/:id", authenticate as any, authorize(["SUPER_ADMIN"]) as any, deleteVehicle as any);
 router.get("/:id/history", authenticate as any, getVehicleHistory as any);
 

@@ -22,7 +22,7 @@ export function authenticate(req: AuthenticatedRequest, res: Response, next: Nex
   }
 }
 
-export function authorize(allowedRoles: ("SUPER_ADMIN" | "BUREAU" | "CHAUFFEUR")[]) {
+export function authorize(allowedRoles: ("SUPER_ADMIN" | "ADMIN" | "CHAUFFEUR")[]) {
   return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
     if (!req.user) {
       return res.status(401).json({ message: "Non authentifié" });
