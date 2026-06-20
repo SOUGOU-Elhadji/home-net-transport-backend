@@ -21,7 +21,7 @@ async function main() {
         lastName: "Sougou",
         email: "admin@homenet.com",
         password: hashedPassword,
-        role: "SUPER_ADMIN",
+        role: "SUPER_ADMIN", 
         status: "ACTIVE"
       }
     });

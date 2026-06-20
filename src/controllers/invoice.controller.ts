@@ -77,7 +77,7 @@ export const createInvoice = async (req: AuthenticatedRequest, res: Response) =>
       data: {
         userId: req.user?.userId,
         action: "CREATION_FACTURE",
-        details: `Création de la facture n°${invoiceNumber} d'un montant de ${amount} €`
+        details: `Création de la facture n°${invoiceNumber} d'un montant de ${amount} Fcfa`
       }
     });
 
